@@ -24,7 +24,7 @@ The product is designed to deliver the best possible user experience with highly
 
 <br />
 
-![Django Material PRO - Premium Seed project powered by Flask.](https://user-images.githubusercontent.com/51070104/213974264-fe9250ff-7035-427b-b63f-bf69790f5a73.png)
+![Material Dashboard BS4 PRO - Premium Django Starter](https://user-images.githubusercontent.com/51070104/215266235-2b096d5a-4447-4a35-ba2b-933389b28bda.jpg)
 
 <br />
 
