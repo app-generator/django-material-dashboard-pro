@@ -133,16 +133,25 @@ The  theme used to style this starter provides the following files:
    |-- ************************************************************************
 ```
 
-When our project requires customization, we need to copy the original file (from the virtual environment) and place it in the template folder using the same path. 
+When the project requires customization, we need to copy the original file that needs an update (from the virtual environment) and place it in the template folder using the same path. 
 
-For instance, the `HOME/templates` directory is shipped with a customized footer: `includes\custom_footer.html`. 
-By default, this file is unused because the `theme` expects `includes\footer.html`. 
+For instance, if we want to customize the `footer.html` these are the steps:
 
-In order to use it, simply rename it to `includes\footer.html` and overwrite it like this the default version shipped in the library:
+- `Step 1`: create the `templates` DIRECTORY inside the `home` app
+- `Step 2`: configure the project to use this new template directory
+- `Step 3`: copy the `footer.html` from the original location (inside your ENV) and save it to the `home/templates` DIR
+  - Source PATH: `<YOUR_ENV>/LIB/admin_material_pro/includes/footer.html`
+  - Destination PATH: `<PROJECT_ROOT>home/templates/includes/footer.html`
 
-`<YOUR Virtual ENV>/LIB/admin_material_pro/includes\footer.html`
+To speed up all these steps, the codebase is already configurated (`Steps 1, and 2`) and a custom footer can be found at this location:
 
-In a similar way, all other files and components can be customized as well.
+`home/templates/includes/custom_footer.html` 
+
+By default, this file is unused because the `theme` expects `footer.html` (without the `custom_` prefix). 
+
+In order to use it, simply rename it to `footer.html`. Like this, the default version shipped in the library is ignored by Django. 
+
+In a similar way, all other files and components can be customized easily.
 
 <br />
 
