@@ -155,6 +155,19 @@ In a similar way, all other files and components can be customized easily.
 
 <br />
 
+## Recompile SCSS
+
+- Copy the SCSS files from the UI LIbrary from `VENV` or from the UI library Repo 
+  - **VENV**: `Lib/site-packages/admin_material_pro/static/assets`
+  - https://github.com/app-generator/priv-django-admin-material-pro
+    - `admin_material_pro/static/assets`
+- Edit the SCSS files
+- Regenerate SCSS (requires Node 16.x)
+  - `yarn`: install modules
+  - `gulp`: regenerate CSS files from SCSS 
+
+<br />
+
 ## Deploy on [Render](https://render.com/)
 
 - Create a Blueprint instance
