@@ -166,6 +166,10 @@ In a similar way, all other files and components can be customized easily.
   - `yarn`: install modules
   - `gulp`: regenerate CSS files from SCSS 
 
+> `NOTE`: The correct structure of files after the copy, should look like this:
+
+![Django Material PRO - SCSS Files Structure](https://github.com/app-generator/django-material-dashboard-pro/assets/51070104/9d665209-218e-4c2d-afe9-812cfa2b3fff) 
+
 <br />
 
 ## Deploy on [Render](https://render.com/)
