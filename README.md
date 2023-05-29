@@ -168,7 +168,7 @@ In a similar way, all other files and components can be customized easily.
 
 > `NOTE`: The correct structure of files after the copy, should look like this:
 
-![Django Material PRO - SCSS Files Structure](https://github.com/app-generator/django-material-dashboard-pro/assets/51070104/9d665209-218e-4c2d-afe9-812cfa2b3fff) 
+![Django Material PRO - SCSS Files Structure](https://github.com/app-generator/django-material-dashboard-pro/assets/51070104/eb0380ce-7264-4209-b56f-1298ad890e93)
 
 <br />
 
