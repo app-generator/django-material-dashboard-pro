@@ -1,0 +1,617 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Simple Table</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="text-center">#</th>
+                      <th>Name</th>
+                      <th>Job Position</th>
+                      <th>Since</th>
+                      <th class="text-right">Salary</th>
+                      <th class="text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>Andrew Mike</td>
+                      <td>Develop</td>
+                      <td>2013</td>
+                      <td class="text-right">&euro; 99,225</td>
+                      <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" class="btn btn-info">
+                          <i class="material-icons">person</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-success">
+                          <i class="material-icons">edit</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-danger">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td>John Doe</td>
+                      <td>Design</td>
+                      <td>2012</td>
+                      <td class="text-right">&euro; 89,241</td>
+                      <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" class="btn btn-info btn-round">
+                          <i class="material-icons">person</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-success btn-round">
+                          <i class="material-icons">edit</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-danger btn-round">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">3</td>
+                      <td>Alex Mike</td>
+                      <td>Design</td>
+                      <td>2010</td>
+                      <td class="text-right">&euro; 92,144</td>
+                      <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" class="btn btn-info btn-link">
+                          <i class="material-icons">person</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-success btn-link">
+                          <i class="material-icons">edit</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-danger btn-link">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">4</td>
+                      <td>Mike Monday</td>
+                      <td>Marketing</td>
+                      <td>2013</td>
+                      <td class="text-right">&euro; 49,990</td>
+                      <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" class="btn btn-info btn-round">
+                          <i class="material-icons">person</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-success btn-round">
+                          <i class="material-icons">edit</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-danger btn-round">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">5</td>
+                      <td>Paul Dickens</td>
+                      <td>Communication</td>
+                      <td>2015</td>
+                      <td class="text-right">&euro; 69,201</td>
+                      <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" class="btn btn-info">
+                          <i class="material-icons">person</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-success">
+                          <i class="material-icons">edit</i>
+                        </button>
+                        <button type="button" rel="tooltip" class="btn btn-danger">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Striped Table</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="text-center">#</th>
+                      <th></th>
+                      <th>Product Name</th>
+                      <th>Type</th>
+                      <th>Qty</th>
+                      <th class="text-right">Price</th>
+                      <th class="text-right">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Moleskine Agenda</td>
+                      <td>Office</td>
+                      <td>25</td>
+                      <td class="text-right">&euro; 49</td>
+                      <td class="text-right">&euro; 1,225</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Stabilo Pen</td>
+                      <td>Office</td>
+                      <td>30</td>
+                      <td class="text-right">&euro; 10</td>
+                      <td class="text-right">&euro; 300</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">3</td>
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>A4 Paper Pack</td>
+                      <td>Office</td>
+                      <td>50</td>
+                      <td class="text-right">&euro; 10.99</td>
+                      <td class="text-right">&euro; 109</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">4</td>
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Apple iPad</td>
+                      <td>Meeting</td>
+                      <td>10</td>
+                      <td class="text-right">&euro; 499.00</td>
+                      <td class="text-right">&euro; 4,990</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">5</td>
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Apple iPhone</td>
+                      <td>Communication</td>
+                      <td>10</td>
+                      <td class="text-right">&euro; 599.00</td>
+                      <td class="text-right">&euro; 5,999</td>
+                    </tr>
+                    <tr>
+                      <td colspan="5"></td>
+                      <td class="td-total">
+                        Total
+                      </td>
+                      <td class="td-price">
+                        <small>&euro;</small>12,999
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Shopping Cart Table</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-shopping">
+                  <thead>
+                    <tr>
+                      <th class="text-center"></th>
+                      <th>Product</th>
+                      <th class="th-description">Color</th>
+                      <th class="th-description">Size</th>
+                      <th class="text-right">Price</th>
+                      <th class="text-right">Qty</th>
+                      <th class="text-right">Amount</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="img-container">
+                          <img src="{% static 'assets/img/product1.jpg' %}" alt="...">
+                        </div>
+                      </td>
+                      <td class="td-name">
+                        <a href="#jacket">Spring Jacket</a>
+                        <br />
+                        <small>by Dolce&Gabbana</small>
+                      </td>
+                      <td>
+                        Red
+                      </td>
+                      <td>
+                        M
+                      </td>
+                      <td class="td-number text-right">
+                        <small>&euro;</small>549
+                      </td>
+                      <td class="td-number">
+                        1
+                        <div class="btn-group btn-group-sm">
+                          <button class="btn btn-round btn-info"> <i class="material-icons">remove</i> </button>
+                          <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button>
+                        </div>
+                      </td>
+                      <td class="td-number">
+                        <small>&euro;</small>549
+                      </td>
+                      <td class="td-actions">
+                        <button type="button" rel="tooltip" data-placement="left" title="Remove item" class="btn btn-link">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="img-container">
+                          <img src="{% static 'assets/img/product2.jpg' %}" alt="..." />
+                        </div>
+                      </td>
+                      <td class="td-name">
+                        <a href="#pants">Short Pants</a>
+                        <br />
+                        <small>by Pucci</small>
+                      </td>
+                      <td>
+                        Purple
+                      </td>
+                      <td>
+                        M
+                      </td>
+                      <td class="td-number">
+                        <small>&euro;</small>499
+                      </td>
+                      <td class="td-number">
+                        2
+                        <div class="btn-group btn-group-sm">
+                          <button class="btn btn-round btn-info"> <i class="material-icons">remove</i> </button>
+                          <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button>
+                        </div>
+                      </td>
+                      <td class="td-number">
+                        <small>&euro;</small>998
+                      </td>
+                      <td class="td-actions">
+                        <button type="button" rel="tooltip" data-placement="left" title="Remove item" class="btn btn-link">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="img-container">
+                          <img src="{% static 'assets/img/product3.jpg' %}" alt="...">
+                        </div>
+                      </td>
+                      <td class="td-name">
+                        <a href="#nothing">Pencil Skirt</a>
+                        <br />
+                        <small>by Valentino</small>
+                      </td>
+                      <td>
+                        White
+                      </td>
+                      <td>
+                        XL
+                      </td>
+                      <td class="td-number">
+                        <small>&euro;</small>799
+                      </td>
+                      <td class="td-number">
+                        1
+                        <div class="btn-group btn-group-sm">
+                          <button class="btn btn-round btn-info"> <i class="material-icons">remove</i> </button>
+                          <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button>
+                        </div>
+                      </td>
+                      <td class="td-number">
+                        <small>&euro;</small>799
+                      </td>
+                      <td class="td-actions">
+                        <button type="button" rel="tooltip" data-placement="left" title="Remove item" class="btn btn-link">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5"></td>
+                      <td class="td-total">
+                        Total
+                      </td>
+                      <td colspan="1" class="td-price">
+                        <small>&euro;</small>2,346
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td colspan="6"></td>
+                      <td colspan="2" class="text-right">
+                        <button type="button" class="btn btn-info btn-round">Complete Purchase <i class="material-icons">keyboard_arrow_right</i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            if ($(".sidebar").length != 0) {
+              var ps = new PerfectScrollbar('.sidebar');
+            }
+            if ($(".sidebar-wrapper").length != 0) {
+              var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+            }
+            if ($(".main-panel").length != 0) {
+              var ps2 = new PerfectScrollbar('.main-panel');
+            }
+            if ($(".main").length != 0) {
+              var ps3 = new PerfectScrollbar('main');
+            }
+
+          } else {
+
+            if ($(".sidebar").length != 0) {
+              var ps = new PerfectScrollbar('.sidebar');
+              ps.destroy();
+            }
+            if ($(".sidebar-wrapper").length != 0) {
+              var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+              ps1.destroy();
+            }
+            if ($(".main-panel").length != 0) {
+              var ps2 = new PerfectScrollbar('.main-panel');
+              ps2.destroy();
+            }
+            if ($(".main").length != 0) {
+              var ps3 = new PerfectScrollbar('main');
+              ps3.destroy();
+            }
+
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+
+{% endblock extra_js %}

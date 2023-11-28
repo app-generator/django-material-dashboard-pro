@@ -13,11 +13,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os, random, string
 from pathlib import Path
 from dotenv import load_dotenv
+from decouple import config
 
 load_dotenv()  # take environment variables from .env.
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(f'BASE_DIR: {BASE_DIR}')
+print(f'CORE_DIR: {CORE_DIR}')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -26,11 +30,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 if not SECRET_KEY:
     SECRET_KEY = ''.join(random.choice( string.ascii_lowercase  ) for i in range( 32 ))
+print(f'SECRET_KEY: {SECRET_KEY}')
+
 
 # Render Deployment Code
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1'),
+                 'scloudw040','scenw0006','scloudw007','scloudw028','scloudw029','atenea',
+                 'scloudw040.grupofuertes.corp',
+                 'scenw0006.grupofuertes.corp','scloudw007.grupofuertes.corp','scloudw028.grupofuertes.corp','scloudw029.grupofuertes.corp',
+                 'atenea.grupofuertes.corp',
+                 '10.92.0.40','10.55.0.50','10.92.4.13']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:    
@@ -46,7 +57,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     "home",
 ]
 
@@ -109,7 +119,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
@@ -147,7 +157,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/gfweb/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = (
@@ -164,3 +174,40 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+LOGGING = {
+    'version': 1,
+    'formatters': {
+        'verbose': {
+            'format': '{name} {levelname} {asctime} {filename} {module} {funcName} {lineno} {processName} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },    
+    'disable_existing_loggers': False,
+    'handlers': {
+        'rotatingFile': {
+#            'level': 'WARNING',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(CORE_DIR, 'logs', 'gfweb.log'),
+            'maxBytes': 1024*1024*1,  # 1MB
+            'backupCount': 10,
+            'delay': True,
+            'formatter': 'verbose'
+        },        
+    },
+    # A logger for WARNING which has a handler called 'file'. A logger can have multiple handler
+    'loggers': {
+        '': {
+            'handlers': ['rotatingFile'], #notice how file variable is called in handler which has been defined above
+#            'level': 'WARNING',
+            'propagate': True,
+        },
+    },
+}
+
+DATE_FORMAT = "d/m/Y"

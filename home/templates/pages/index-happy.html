@@ -1,0 +1,133 @@
+{% extends 'layouts/base-happy.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-md-10 ml-auto mr-auto">
+            <div class="page-categories">
+              <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#link7" role="tablist">
+                    <i class="material-icons">task</i> Firma Docuten
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#link8" role="tablist">
+                    <i class="material-icons">apps</i> Botones
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#link9" role="tablist">
+                    <i class="material-icons">gavel</i> Legal Info
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#link10" role="tablist">
+                    <i class="material-icons">help_outline</i> Help Center
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content tab-space tab-subcategories">
+                <div class="tab-pane active" id="link7">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Servicio de Firma Electrónica</h4>
+                      <p class="card-category">
+                        Firma electrónica con Docuten
+                      </p>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-4 ml-auto mr-auto text-center">
+                          <a class="btn btn-success btn-lg" href="{% url 'sfirma_nuevo' %}">Solicitud Nueva</a>
+                        </div>
+                        <div class="col-md-4 ml-auto mr-auto text-center">
+                          <a class="btn btn-success btn-lg" href="{% url 'sfirma_consulta' %}">Consulta</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="link8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Grid de botones</h4>
+                      <p class="card-category">
+                        More information here
+                      </p>
+                    </div>
+                    <div class="card-body">
+
+                      <div class="row">
+                        {% for boton in botones %}
+                          <div class="col-sm-4 col-lg-2">
+                            <a href="/">
+                              <div class="card"><div class="card-body text-center">
+                                <code>{{boton}}</code>
+                              </div></div>
+                            </a>
+                          </div>
+                        {% endfor %}
+                      </div>                      
+
+                      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                      <br>
+                      <br> Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="link9">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Legal info of the product</h4>
+                      <p class="card-category">
+                        More information here
+                      </p>
+                    </div>
+                    <div class="card-body">
+                      Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                      <br>
+                      <br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="link10">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Help center</h4>
+                      <p class="card-category">
+                        More information here
+                      </p>
+                    </div>
+                    <div class="card-body">
+                      From the seamless transition of glass and metal to the streamlined profile, every detail was carefully considered to enhance your experience. So while its display is larger, the phone feels just right.
+                      <br>
+                      <br> Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        console.log('hola mundo - index-happy.html');
+      });
+    });
+  </script>
+{% endblock extra_js %}

@@ -1,0 +1,328 @@
+{% load i18n static admin_material %}
+
+<ul class="nav">
+
+  <li class="nav-item {% if 'dashboard' in segment %}active{% endif %} ">
+    {% if request.user.is_superuser %}
+    <a class="nav-link" href="{% url 'admin:index' %}">
+    {% else %}
+    <a class="nav-link" href="{% url 'dashboard' %}">
+    {% endif %}
+      <i class="material-icons">dashboard</i>
+      <p> Dashboard </p>
+    </a>
+  </li>
+
+  {% admin_get_menu as app_list %}
+  {% if app_list %}
+    {% for app in app_list %}
+      {% if app.has_perms and not app.pinned %}
+        <li class="nav-item {% if app_label == app.label and app.url not in request.path|urlencode  %} active {% endif %}">
+          <a data-toggle="collapse" href="#dashboards{{app.app_label}}" class="nav-link">
+            <i class="material-icons">{{ app.icon }}</i>
+            <p>{{ app.label|slice:15 }}{% if app.label|length > 15 %}..{% endif %}
+              <b class="caret"></b>
+            </p>
+          </a>
+          {% if app.models %}
+            <div 
+              class="collapse {% if 'tables-bootstrap-' in segment or app_label == app.label or app.url in request.path|urlencode %} show {% endif %}" 
+              id="dashboards{{app.app_label}}"
+            >
+              <ul class="nav">
+                {% for model in app.models %}
+                  {% if model.url %}
+                    <li class="nav-item {% if 'bootstrap-tables' in segment or model.url in request.path|urlencode %} active {% endif %}">
+                      <a class="nav-link" href="{{ model.url }}">
+                        <span class="sidebar-mini"> {{ model.label|first }} </span>
+                        <span class="sidebar-normal">{{ model.label }}</span>
+                      </a>
+                    </li>
+                  {% else %}
+                    <li class="nav-item list-unstyled">{{ model.label }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div> 
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if not request.user.is_authenticated %}
+  <li class="nav-item {% if 'pages' in parent %}active{% endif %}">
+    <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+      <i class="material-icons">image</i>
+      <p> Pages
+        <b class="caret"></b>
+      </p>
+    </a>
+    <div class="collapse {% if 'pages' in parent %}show{% endif %}" id="pagesExamples">
+      <ul class="nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'login' %}">
+            <span class="sidebar-mini"> LP </span>
+            <span class="sidebar-normal"> Login Page </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'register' %}">
+            <span class="sidebar-mini"> RP </span>
+            <span class="sidebar-normal"> Register Page </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  {% endif %}
+
+  {% if request.user.is_authenticated %}
+  <li class="nav-item {% if 'pages' in parent %}active{% endif %}">
+    <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+      <i class="material-icons">image</i>
+      <p> Pages
+        <b class="caret"></b>
+      </p>
+    </a>
+    <div class="collapse {% if 'pages' in parent %}show{% endif %}" id="pagesExamples">
+      <ul class="nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'pricing' %}">
+            <span class="sidebar-mini"> P </span>
+            <span class="sidebar-normal"> Pricing </span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'rtl_page' %}">
+            <span class="sidebar-mini"> RS </span>
+            <span class="sidebar-normal"> RTL Support </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'timeline' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'timeline' %}">
+            <span class="sidebar-mini"> T </span>
+            <span class="sidebar-normal"> Timeline </span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'login' %}">
+            <span class="sidebar-mini"> LP </span>
+            <span class="sidebar-normal"> Login Page </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'register' %}">
+            <span class="sidebar-mini"> RP </span>
+            <span class="sidebar-normal"> Register Page </span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'lock' %}">
+            <span class="sidebar-mini"> LSP </span>
+            <span class="sidebar-normal"> Lock Screen Page </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'user_profile' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'user_profile' %}">
+            <span class="sidebar-mini"> UP </span>
+            <span class="sidebar-normal"> User Profile </span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'error' %}">
+            <span class="sidebar-mini"> E </span>
+            <span class="sidebar-normal"> Error Page </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item {% if 'components' in parent %}active{% endif %}">
+    <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
+      <i class="material-icons">apps</i>
+      <p> Components
+        <b class="caret"></b>
+      </p>
+    </a>
+    <div class="collapse {% if 'components' in parent %}show{% endif %} " id="componentsExamples">
+      <ul class="nav">
+        <li class="nav-item {% if 'components' in parent %}active{% endif %}">
+          <a class="nav-link" data-toggle="collapse" href="#componentsCollapse">
+            <span class="sidebar-mini"> MLT </span>
+            <span class="sidebar-normal"> Multi Level Collapse
+              <b class="caret"></b>
+            </span>
+          </a>
+          <div class="collapse {% if 'components' in parent %}show{% endif %}" id="componentsCollapse">
+            <ul class="nav">
+              <li class="nav-item ">
+                <a class="nav-link" href="#0">
+                  <span class="sidebar-mini"> E </span>
+                  <span class="sidebar-normal"> Example </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item {% if 'buttons' in segment %}active{% endif %} ">
+          <a class="nav-link" href="{% url 'buttons' %}">
+            <span class="sidebar-mini"> B </span>
+            <span class="sidebar-normal"> Buttons </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'grid_system' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'grid' %}">
+            <span class="sidebar-mini"> GS </span>
+            <span class="sidebar-normal"> Grid System </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'panels' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'panels' %}">
+            <span class="sidebar-mini"> P </span>
+            <span class="sidebar-normal"> Panels </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'sweet_alerts' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'sweet_alerts' %}">
+            <span class="sidebar-mini"> SA </span>
+            <span class="sidebar-normal"> Sweet Alert </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'notifications' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'notifications' %}">
+            <span class="sidebar-mini"> N </span>
+            <span class="sidebar-normal"> Notifications </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'icons' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'icons' %}">
+            <span class="sidebar-mini"> I </span>
+            <span class="sidebar-normal"> Icons </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'typography' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'typography' %}">
+            <span class="sidebar-mini"> T </span>
+            <span class="sidebar-normal"> Typography </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item {% if 'forms' in parent %}active{% endif %}">
+    <a class="nav-link" data-toggle="collapse" href="#formsExamples">
+      <i class="material-icons">content_paste</i>
+      <p> Forms
+        <b class="caret"></b>
+      </p>
+    </a>
+    <div class="collapse {% if 'forms' in parent %}show{% endif %}" id="formsExamples">
+      <ul class="nav">
+        <li class="nav-item {% if 'regular_forms' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'regular_forms' %}">
+            <span class="sidebar-mini"> RF </span>
+            <span class="sidebar-normal"> Regular Forms </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'extended_forms' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'extended_forms' %}">
+            <span class="sidebar-mini"> EF </span>
+            <span class="sidebar-normal"> Extended Forms </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'validation_forms' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'validation_form' %}">
+            <span class="sidebar-mini"> VF </span>
+            <span class="sidebar-normal"> Validation Forms </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'wizard' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'wizard' %}">
+            <span class="sidebar-mini"> W </span>
+            <span class="sidebar-normal"> Wizard </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item {% if 'tables' in parent %}active{% endif %}">
+    <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
+      <i class="material-icons">grid_on</i>
+      <p> Tables
+        <b class="caret"></b>
+      </p>
+    </a>
+    <div class="collapse {% if 'tables' in parent %}show{% endif %}" id="tablesExamples">
+      <ul class="nav">
+        <li class="nav-item {% if 'regular_tables' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'regular_tables' %}">
+            <span class="sidebar-mini"> RT </span>
+            <span class="sidebar-normal"> Regular Tables </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'extended_tables' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'extended_tables' %}">
+            <span class="sidebar-mini"> ET </span>
+            <span class="sidebar-normal"> Extended Tables </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'datatables' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'datatables' %}">
+            <span class="sidebar-mini"> DT </span>
+            <span class="sidebar-normal"> DataTables.net </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item {% if 'maps' in parent %}active{% endif %}">
+    <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
+      <i class="material-icons">place</i>
+      <p> Maps
+        <b class="caret"></b>
+      </p>
+    </a>
+    <div class="collapse {% if 'maps' in parent %}show{% endif %}" id="mapsExamples">
+      <ul class="nav">
+        <li class="nav-item {% if 'google_maps' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'google_maps' %}">
+            <span class="sidebar-mini"> GM </span>
+            <span class="sidebar-normal"> Google Maps </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'full_screen_maps' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'fullscreen_maps' %}">
+            <span class="sidebar-mini"> FSM </span>
+            <span class="sidebar-normal"> Full Screen Map </span>
+          </a>
+        </li>
+        <li class="nav-item {% if 'vector_map' in segment %}active{% endif %}">
+          <a class="nav-link" href="{% url 'vector_map' %}">
+            <span class="sidebar-mini"> VM </span>
+            <span class="sidebar-normal"> Vector Map </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item {% if 'widgets' in segment %}active{% endif %} ">
+    <a class="nav-link" href="{% url 'widgets' %}">
+      <i class="material-icons">widgets</i>
+      <p> Widgets </p>
+    </a>
+  </li>
+  <li class="nav-item {% if 'charts' in segment %}active{% endif %} ">
+    <a class="nav-link" href="{% url 'charts' %}">
+      <i class="material-icons">timeline</i>
+      <p> Charts </p>
+    </a>
+  </li>
+  <li class="nav-item {% if 'calendar' in segment %}active{% endif %}">
+    <a class="nav-link" href="{% url 'calendar' %}">
+      <i class="material-icons">date_range</i>
+      <p> Calendar </p>
+    </a>
+  </li>
+  {% endif %}
+</ul>

@@ -1,0 +1,295 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="header text-center">
+        <h3 class="title">Sweet Alert 2</h3>
+        <p class="category">A beautiful plugin, that replace the classic alert, Handcrafted by our friend
+          <a target="_blank" href="https://twitter.com/t4t5">Tristan Edwards</a>. Please check out the
+          <a href="https://github.com/sweetalert2/sweetalert2" target="_blank">full documentation.</a>
+        </p>
+      </div>
+      <div class="places-sweet-alerts">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">Basic example</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('basic')">Try me!</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">A title with a text under</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('title-and-text')">Try me!</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">A success message</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('success-message')">Try me!</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">Custom HTML description</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('custom-html')">Try me!</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">A warning message, with a function attached to the "Confirm" Button...</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('warning-message-and-confirmation')">Try me!</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">...and by passing a parameter, you can execute something else for "Cancel"</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('warning-message-and-cancel')">Try me!</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">A message with auto close timer set to 2 seconds</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('auto-close')">Try me!</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card ">
+              <div class="card-body text-center">
+                <h5 class="card-text">Modal window with input field</h5>
+                <button class="btn btn-rose btn-fill" onclick="demo.showSwal('input-field')">Try me!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+  $(document).ready(function() {
+    $().ready(function() {
+      $sidebar = $('.sidebar');
+
+      $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+      $full_page = $('.full-page');
+
+      $sidebar_responsive = $('body > .navbar-collapse');
+
+      window_width = $(window).width();
+
+      fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+      if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+        if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+          $('.fixed-plugin .dropdown').addClass('open');
+        }
+
+      }
+
+      $('.fixed-plugin a').click(function(event) {
+        // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+        if ($(this).hasClass('switch-trigger')) {
+          if (event.stopPropagation) {
+            event.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+        }
+      });
+
+      $('.fixed-plugin .active-color span').click(function() {
+        $full_page_background = $('.full-page-background');
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        var new_color = $(this).data('color');
+
+        if ($sidebar.length != 0) {
+          $sidebar.attr('data-color', new_color);
+        }
+
+        if ($full_page.length != 0) {
+          $full_page.attr('filter-color', new_color);
+        }
+
+        if ($sidebar_responsive.length != 0) {
+          $sidebar_responsive.attr('data-color', new_color);
+        }
+      });
+
+      $('.fixed-plugin .background-color .badge').click(function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        var new_color = $(this).data('background-color');
+
+        if ($sidebar.length != 0) {
+          $sidebar.attr('data-background-color', new_color);
+        }
+      });
+
+      $('.fixed-plugin .img-holder').click(function() {
+        $full_page_background = $('.full-page-background');
+
+        $(this).parent('li').siblings().removeClass('active');
+        $(this).parent('li').addClass('active');
+
+
+        var new_image = $(this).find("img").attr('src');
+
+        if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+          $sidebar_img_container.fadeOut('fast', function() {
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $sidebar_img_container.fadeIn('fast');
+          });
+        }
+
+        if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+          var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+          $full_page_background.fadeOut('fast', function() {
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+            $full_page_background.fadeIn('fast');
+          });
+        }
+
+        if ($('.switch-sidebar-image input:checked').length == 0) {
+          var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+          var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+          $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+          $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+        }
+
+        if ($sidebar_responsive.length != 0) {
+          $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+        }
+      });
+
+      $('.switch-sidebar-image input').change(function() {
+        $full_page_background = $('.full-page-background');
+
+        $input = $(this);
+
+        if ($input.is(':checked')) {
+          if ($sidebar_img_container.length != 0) {
+            $sidebar_img_container.fadeIn('fast');
+            $sidebar.attr('data-image', '#');
+          }
+
+          if ($full_page_background.length != 0) {
+            $full_page_background.fadeIn('fast');
+            $full_page.attr('data-image', '#');
+          }
+
+          background_image = true;
+        } else {
+          if ($sidebar_img_container.length != 0) {
+            $sidebar.removeAttr('data-image');
+            $sidebar_img_container.fadeOut('fast');
+          }
+
+          if ($full_page_background.length != 0) {
+            $full_page.removeAttr('data-image', '#');
+            $full_page_background.fadeOut('fast');
+          }
+
+          background_image = false;
+        }
+      });
+
+      $('.switch-sidebar-mini input').change(function() {
+        $body = $('body');
+
+        $input = $(this);
+
+        if (md.misc.sidebar_mini_active == true) {
+          $('body').removeClass('sidebar-mini');
+          md.misc.sidebar_mini_active = false;
+
+          if ($(".sidebar").length != 0) {
+            var ps = new PerfectScrollbar('.sidebar');
+          }
+          if ($(".sidebar-wrapper").length != 0) {
+            var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+          }
+          if ($(".main-panel").length != 0) {
+            var ps2 = new PerfectScrollbar('.main-panel');
+          }
+          if ($(".main").length != 0) {
+            var ps3 = new PerfectScrollbar('main');
+          }
+
+        } else {
+
+          if ($(".sidebar").length != 0) {
+            var ps = new PerfectScrollbar('.sidebar');
+            ps.destroy();
+          }
+          if ($(".sidebar-wrapper").length != 0) {
+            var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+            ps1.destroy();
+          }
+          if ($(".main-panel").length != 0) {
+            var ps2 = new PerfectScrollbar('.main-panel');
+            ps2.destroy();
+          }
+          if ($(".main").length != 0) {
+            var ps3 = new PerfectScrollbar('main');
+            ps3.destroy();
+          }
+
+
+          setTimeout(function() {
+            $('body').addClass('sidebar-mini');
+
+            md.misc.sidebar_mini_active = true;
+          }, 300);
+        }
+
+        // we simulate the window Resize so the charts will get updated in realtime.
+        var simulateWindowResize = setInterval(function() {
+          window.dispatchEvent(new Event('resize'));
+        }, 180);
+
+        // we stop the simulation of Window Resize after the animations are completed
+        setTimeout(function() {
+          clearInterval(simulateWindowResize);
+        }, 1000);
+
+      });
+    });
+  });
+</script>
+<!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script>
+  $(document).ready(function() {
+    // Initialise Sweet Alert library
+    demo.showSwal();
+  });
+</script>
+{% endblock extra_js %}

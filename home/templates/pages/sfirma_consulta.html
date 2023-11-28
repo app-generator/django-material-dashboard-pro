@@ -1,0 +1,184 @@
+{% extends 'layouts/base-happy.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-primary card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Solicitudes de Firma Electrónica</h4>
+            </div>
+            <div class="card-body">
+              <div class="toolbar">
+                <!--        Here you can write extra buttons/actions for the toolbar              -->
+              </div>
+              <div class="material-datatables">
+                <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                  <thead>
+                    <tr>
+
+                      <td>data_id</td>
+                      <th>id_solicitud</th>
+                      <th>document_file_name</th>
+                      <th>doc_status_code</th>
+                      <th>email_solicitante</th>
+                      <th>ID_STATUS_AICA</th>
+                      <th>signer_email</th>
+
+                      <th class="disabled-sorting text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    {% for dato in datos %}
+                      <tr>
+                        <td>{{ dato.data_id }}</td>
+                        <td>{{ dato.id_solicitud }}</td>
+                        <td>{{ dato.document_file_name }}</td>
+                        <td>{{ dato.doc_status_code|default_if_none:"" }} {{ dato.error_code|default_if_none:"" }} {{ dato.error_message|default_if_none:"" }}</td>
+                        <td>{{ dato.email_solicitante }}</td>
+                        <td>{{ dato.ID_STATUS_AICA }}</td>
+                        <td>{{ dato.signer_email }}</td>
+
+                        <td class="text-right">
+                          <!-- <a href="#" class="btn btn-link btn-info btn-just-icon like"><i class="material-icons">favorite</i></a>
+                          <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
+                          <a href="#" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a> -->
+                          <a href="#" class="btn btn-link btn-info btn-just-icon descarga-pdf"><i class="material-icons">quiz</i></a>
+                          <a href="{% url 'sfirma_descarga_pdf' doc_id=dato.data_id status=dato.doc_status_code %}" class="btn btn-link btn-info btn-just-icon"><i class="material-icons">picture_as_pdf</i></a>
+                        </td>
+  
+                      </tr>
+                    {% endfor %}                    
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- end content-->
+          </div>
+          <!--  end card  -->
+        </div>
+        <!-- end col-md-12 -->
+      </div>
+      <!-- end row -->
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+  <script>
+    $(document).ready(function() {
+      console.log('hola mundo - sfirma_consulta.html');
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#datatables').DataTable({
+        "pagingType": "full_numbers",
+        "lengthMenu": [
+          [10, 25, 50, -1],
+          [10, 25, 50, "All"]
+        ],
+        responsive: true,
+        language: {
+          search: "Búsqueda en solicitudes:",
+          searchPlaceholder: "texto a buscar",
+        }
+      });
+
+      var table = $('#datatables').DataTable();
+
+      // Botón descarga-pdf
+      table.on('click', '.descarga-pdf', function() {
+        $tr = $(this).closest('tr');
+        if ($($tr).hasClass('child')) {
+          $tr = $tr.prev('.parent');
+        }
+
+        // Compone la URL de descarga
+        var data = table.row($tr).data();
+        doc_id = data[0];
+        status = data[3];
+        titulo = data[2];
+        url_descarga = "{% url 'sfirma_descarga_pdf' doc_id=11111 status='22222' %}".replace("11111", doc_id).replace("22222", status);
+        console.log(url_descarga);
+
+        // Confirmación del usuario
+        swal({
+          title: '¿Está seguro?',
+          text: "¿Descargar el documento "+titulo+"?",
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Sí, descargalo!',
+          cancelButtonText: 'No lo necesito',
+          confirmButtonClass: "btn btn-success",
+          cancelButtonClass: "btn btn-danger",
+          buttonsStyling: false
+        }).then(function(result) {
+
+          console.log(result)
+
+          // Mensaje de descarga
+          if (result.value === true) {
+            swal({
+              title: 'Descargar!',
+              text: 'El PDF se descargará en su dispositivo',
+              type: 'success',
+              confirmButtonClass: "btn btn-success",
+              buttonsStyling: false
+            }).catch(swal.noop)
+            
+            // Abre la URL de descarga
+            window.location.href = url_descarga;
+          }
+
+          // Ha pulsado "cancelar"
+          if (result.dismiss === 'cancel') {
+            return;
+          }
+
+        })        
+
+      });
+
+//      // Edit record
+//      table.on('click', '.edit', function() {
+//        $tr = $(this).closest('tr');
+//
+//        if ($($tr).hasClass('child')) {
+//          $tr = $tr.prev('.parent');
+//        }
+//
+//        var data = table.row($tr).data();
+//        alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
+//      });
+//
+//      // Delete a record
+//      table.on('click', '.remove', function(e) {
+//        $tr = $(this).closest('tr');
+//
+//        if ($($tr).hasClass('child')) {
+//          $tr = $tr.prev('.parent');
+//        }
+//
+//        table.row($tr).remove().draw();
+//        e.preventDefault();
+//      });
+//
+//      //Like record
+//      table.on('click', '.like', function() {
+//        alert('You clicked on Like button');
+//      });
+
+
+    });
+  </script>  
+{% endblock extra_js %}

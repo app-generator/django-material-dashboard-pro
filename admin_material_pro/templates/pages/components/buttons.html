@@ -1,0 +1,681 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-header">
+              <h4 class="card-title">Pick your Color</h4>
+            </div>
+            <div class="card-body">
+              <button class="btn">Default</button>
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-info">Info</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-warning">Warning</button>
+              <button class="btn btn-danger">Danger</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-header">
+              <h4 class="card-title">Buttons with Label</h4>
+            </div>
+            <div class="card-body">
+              <button class="btn">
+                <span class="btn-label">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </span>
+                Left
+              </button>
+              <button class="btn">
+                Right
+                <span class="btn-label btn-label-right">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </span>
+              </button>
+              <button class="btn btn-info">
+                <span class="btn-label">
+                  <i class="material-icons">priority_high</i>
+                </span>
+                Info
+              </button>
+              <button class="btn btn-success">
+                <span class="btn-label">
+                  <i class="material-icons">check</i>
+                </span>
+                Success
+              </button>
+              <button class="btn btn-warning">
+                <i class="material-icons">warning</i> Warning
+              </button>
+              <button class="btn btn-danger">
+                <i class="material-icons">close</i> Danger
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-header">
+              <h4 class="card-title">Pick your Size</h4>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-primary">Regular</button>
+              <button class="btn btn-primary btn-lg">Large</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-header">
+              <h4 class="card-title">Pick your Style</h4>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-primary">Default</button>
+              <button class="btn btn-primary btn-round">round</button>
+              <button class="btn btn-primary btn-round">
+                <i class="material-icons">favorite</i> with icon
+              </button>
+              <button class="btn btn-primary btn-round btn-fab">
+                <i class="material-icons">favorite</i>
+              </button>
+              <button class="btn btn-primary btn-link">
+                simple
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-header">
+              <h4 class="card-title">Pagination</h4>
+            </div>
+            <div class="card-body">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination pagination-primary">
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#link">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#link">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#link">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#link">5</a>
+                  </li>
+                </ul>
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#link" aria-label="Previous">
+                      <span aria-hidden="true"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#link">1</a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#link">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#link">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#link" aria-label="Next">
+                      <span aria-hidden="true"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-header">
+              <h4 class="card-title">Button Group</h4>
+            </div>
+            <div class="card-body">
+              <div class="btn-group">
+                <button type="button" class="btn btn-info">Left</button>
+                <button type="button" class="btn btn-info">Middle</button>
+                <button type="button" class="btn btn-info">Right</button>
+              </div>
+              <br>
+              <br>
+              <div class="btn-group" data-toggle="buttons">
+                <button type="button" class="btn btn-round btn-info">1</button>
+                <button type="button" class="btn btn-round btn-info">2</button>
+                <button type="button" class="btn btn-round btn-info">3</button>
+                <button type="button" class="btn btn-round btn-info">4</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-round btn-info">5</button>
+                <button type="button" class="btn btn-round btn-info">6</button>
+                <button type="button" class="btn btn-round btn-info">7</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-header">
+              <h4 class="card-title">Social buttons</h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <p class="category">Default</p>
+                  <button class="btn btn-twitter">
+                    <i class="fa fa-twitter"></i> Connect with Twitter
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <p class="category">&nbsp;</p>
+                  <button class="btn btn-just-icon btn-twitter">
+                    <i class="fa fa-twitter"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <p class="category">&nbsp;</p>
+                  <button class="btn btn-just-icon btn-round btn-twitter">
+                    <i class="fa fa-twitter"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <p class="category">Neutral</p>
+                  <button class="btn btn-just-icon btn-link btn-twitter">
+                    <i class="fa fa-twitter"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <p class="category">&nbsp;</p>
+                  <button class="btn btn-link btn-twitter">
+                    <i class="fa fa-twitter"></i> Connect with Twitter
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-facebook">
+                    <i class="fa fa-facebook-square"></i> Share · 2.2k
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-facebook">
+                    <i class="fa fa-facebook"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-facebook">
+                    <i class="fa fa-facebook"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-facebook">
+                    <i class="fa fa-facebook-square"> </i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-facebook">
+                    <i class="fa fa-facebook-square"></i> Share · 2.2k
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-google">
+                    <i class="fa fa-google-plus"></i> Share on Google+
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-google">
+                    <i class="fa fa-google-plus"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-google">
+                    <i class="fa fa-google-plus"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-google">
+                    <i class="fa fa-google-plus"> </i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-google">
+                    <i class="fa fa-google-plus"></i> Share on Google+
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-linkedin">
+                    <i class="fa fa-linkedin-square"></i> Connect with Linkedin
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-linkedin">
+                    <i class="fa fa-linkedin"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-linkedin">
+                    <i class="fa fa-linkedin"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-linkedin">
+                    <i class="fa fa-linkedin-square"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-linkedin">
+                    <i class="fa fa-linkedin-square"></i> Connect with Linkedin
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-pinterest">
+                    <i class="fa fa-pinterest"></i> Pint it · 212
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-pinterest">
+                    <i class="fa fa-pinterest"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-pinterest">
+                    <i class="fa fa-pinterest"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-pinterest">
+                    <i class="fa fa-pinterest"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-pinterest">
+                    <i class="fa fa-pinterest"></i> Pint it · 212
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-youtube">
+                    <i class="fa fa-youtube-play"></i> View on Youtube
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-youtube">
+                    <i class="fa fa-youtube"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-youtube">
+                    <i class="fa fa-youtube"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-youtube">
+                    <i class="fa fa-youtube"> </i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-youtube">
+                    <i class="fa fa-youtube-play"></i> View on Youtube
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-tumblr">
+                    <i class="fa fa-tumblr-square"></i> Repost
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-tumblr">
+                    <i class="fa fa-tumblr"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-tumblr">
+                    <i class="fa fa-tumblr"> </i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-tumblr">
+                    <i class="fa fa-tumblr-square"> </i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-tumblr">
+                    <i class="fa fa-tumblr-square"></i> Repost
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-github">
+                    <i class="fa fa-github"></i> Connect with Github
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-github">
+                    <i class="fa fa-github"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-github">
+                    <i class="fa fa-github"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-github">
+                    <i class="fa fa-github"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-github">
+                    <i class="fa fa-github"></i> Connect with Github
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-behance">
+                    <i class="fa fa-behance-square"></i> Follow us
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-behance">
+                    <i class="fa fa-behance"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-behance">
+                    <i class="fa fa-behance"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-behance">
+                    <i class="fa fa-behance"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-behance">
+                    <i class="fa fa-behance-square"></i> Follow us
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-dribbble">
+                    <i class="fa fa-dribbble"></i> Find us on Dribble
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-dribbble">
+                    <i class="fa fa-dribbble"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-dribbble">
+                    <i class="fa fa-dribbble"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-dribbble">
+                    <i class="fa fa-dribbble"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-dribbble">
+                    <i class="fa fa-dribbble"></i> Find us on Dribble
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-5">
+                  <button class="btn btn-reddit">
+                    <i class="fa fa-reddit"></i> Repost · 232
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-reddit">
+                    <i class="fa fa-reddit"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-round btn-reddit">
+                    <i class="fa fa-reddit"></i>
+                  </button>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <button class="btn btn-just-icon btn-link btn-reddit">
+                    <i class="fa fa-reddit"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <button class="btn btn-link btn-reddit">
+                    <i class="fa fa-reddit"></i> Repost · 232
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+  $(document).ready(function() {
+    $().ready(function() {
+      $sidebar = $('.sidebar');
+
+      $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+      $full_page = $('.full-page');
+
+      $sidebar_responsive = $('body > .navbar-collapse');
+
+      window_width = $(window).width();
+
+      fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+      if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+        if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+          $('.fixed-plugin .dropdown').addClass('open');
+        }
+
+      }
+
+      $('.fixed-plugin a').click(function(event) {
+        // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+        if ($(this).hasClass('switch-trigger')) {
+          if (event.stopPropagation) {
+            event.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+        }
+      });
+
+      $('.fixed-plugin .active-color span').click(function() {
+        $full_page_background = $('.full-page-background');
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        var new_color = $(this).data('color');
+
+        if ($sidebar.length != 0) {
+          $sidebar.attr('data-color', new_color);
+        }
+
+        if ($full_page.length != 0) {
+          $full_page.attr('filter-color', new_color);
+        }
+
+        if ($sidebar_responsive.length != 0) {
+          $sidebar_responsive.attr('data-color', new_color);
+        }
+      });
+
+      $('.fixed-plugin .background-color .badge').click(function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        var new_color = $(this).data('background-color');
+
+        if ($sidebar.length != 0) {
+          $sidebar.attr('data-background-color', new_color);
+        }
+      });
+
+      $('.fixed-plugin .img-holder').click(function() {
+        $full_page_background = $('.full-page-background');
+
+        $(this).parent('li').siblings().removeClass('active');
+        $(this).parent('li').addClass('active');
+
+
+        var new_image = $(this).find("img").attr('src');
+
+        if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+          $sidebar_img_container.fadeOut('fast', function() {
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $sidebar_img_container.fadeIn('fast');
+          });
+        }
+
+        if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+          var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+          $full_page_background.fadeOut('fast', function() {
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+            $full_page_background.fadeIn('fast');
+          });
+        }
+
+        if ($('.switch-sidebar-image input:checked').length == 0) {
+          var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+          var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+          $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+          $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+        }
+
+        if ($sidebar_responsive.length != 0) {
+          $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+        }
+      });
+
+      $('.switch-sidebar-image input').change(function() {
+        $full_page_background = $('.full-page-background');
+
+        $input = $(this);
+
+        if ($input.is(':checked')) {
+          if ($sidebar_img_container.length != 0) {
+            $sidebar_img_container.fadeIn('fast');
+            $sidebar.attr('data-image', '#');
+          }
+
+          if ($full_page_background.length != 0) {
+            $full_page_background.fadeIn('fast');
+            $full_page.attr('data-image', '#');
+          }
+
+          background_image = true;
+        } else {
+          if ($sidebar_img_container.length != 0) {
+            $sidebar.removeAttr('data-image');
+            $sidebar_img_container.fadeOut('fast');
+          }
+
+          if ($full_page_background.length != 0) {
+            $full_page.removeAttr('data-image', '#');
+            $full_page_background.fadeOut('fast');
+          }
+
+          background_image = false;
+        }
+      });
+
+      $('.switch-sidebar-mini input').change(function() {
+        $body = $('body');
+
+        $input = $(this);
+
+        if (md.misc.sidebar_mini_active == true) {
+          $('body').removeClass('sidebar-mini');
+          md.misc.sidebar_mini_active = false;
+
+          if ($(".sidebar").length != 0) {
+            var ps = new PerfectScrollbar('.sidebar');
+          }
+          if ($(".sidebar-wrapper").length != 0) {
+            var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+          }
+          if ($(".main-panel").length != 0) {
+            var ps2 = new PerfectScrollbar('.main-panel');
+          }
+          if ($(".main").length != 0) {
+            var ps3 = new PerfectScrollbar('main');
+          }
+
+        } else {
+
+          if ($(".sidebar").length != 0) {
+            var ps = new PerfectScrollbar('.sidebar');
+            ps.destroy();
+          }
+          if ($(".sidebar-wrapper").length != 0) {
+            var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+            ps1.destroy();
+          }
+          if ($(".main-panel").length != 0) {
+            var ps2 = new PerfectScrollbar('.main-panel');
+            ps2.destroy();
+          }
+          if ($(".main").length != 0) {
+            var ps3 = new PerfectScrollbar('main');
+            ps3.destroy();
+          }
+
+
+          setTimeout(function() {
+            $('body').addClass('sidebar-mini');
+
+            md.misc.sidebar_mini_active = true;
+          }, 300);
+        }
+
+        // we simulate the window Resize so the charts will get updated in realtime.
+        var simulateWindowResize = setInterval(function() {
+          window.dispatchEvent(new Event('resize'));
+        }, 180);
+
+        // we stop the simulation of Window Resize after the animations are completed
+        setTimeout(function() {
+          clearInterval(simulateWindowResize);
+        }, 1000);
+
+      });
+    });
+  });
+</script>
+{% endblock extra_js %}

@@ -1,0 +1,44 @@
+<!--
+=========================================================
+Material Dashboard PRO - v2.2.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard-pro
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  {% include 'includes/head.html' %}
+  {% block extrastyle %}{% endblock extrastyle %}
+</head>
+
+<body class="off-canvas-sidebar">
+  {% block header %}
+    {% include 'includes/navigation-auth.html' %}
+  {% endblock header %}
+  <div class="wrapper wrapper-full-page">
+    {% block content %}{% endblock content %}
+  </div>
+
+  <!--   Core JS Files   -->
+  <script src="{% static 'assets/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/bootstrap-material-design.min.js' %}"></script>
+  <script src="{% static 'assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="{% static 'assets/js/plugins/chartist.min.js' %}"></script>
+  <!--  Notifications Plugin    -->
+  <script src="{% static 'assets/js/plugins/bootstrap-notify.js' %}"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{% static 'assets/js/material-dashboard.js' %}?v=2.2.2" type="text/javascript"></script>
+  {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

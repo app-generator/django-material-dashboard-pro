@@ -1,0 +1,147 @@
+{% extends 'layouts/base-happy.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header card-header-rose card-header-text">
+                <div class="card-text">
+                  <h4 class="card-title">Solicitud de Firma Electrónica</h4>
+                </div>
+              </div>
+              <div class="card-body ">
+
+                {% if form.errors %}
+                    <div class="alert alert-danger">
+                        {{ form.errors }}
+                    </div>
+                {% endif %}
+
+                <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                  {% csrf_token %}
+
+                  <div class="row mt-2">
+                    <label for="id_document_title" class="col-sm-2 col-form-label">Título Documento</label>
+                    <div class="col-sm-10">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="document_title" placeholder="Título del documento" value="{{form.document_title.value|default_if_none:''}}" required id="id_document_title">
+                        <span class="bmd-help">Título del documento a firmar. Aparecerá en el email que envía Docuten al firmante.</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row mt-2">
+                    <label for="id_signer_name" class="col-sm-2 col-form-label">Nombre Firmante</label>
+                    <div class="col-sm-10">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="signer_name" placeholder="Nombre del firmante" value="{{form.signer_name.value|default_if_none:''}}" required id="id_signer_name">
+                        <span class="bmd-help">Nombre de la persona que firma el documento</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row mt-2">
+                    <label for="id_signer_email" class="col-sm-2 col-form-label">Email Firmante</label>
+                    <div class="col-sm-10">
+                      <div class="form-group">
+                        <input type="email"class="form-control"  name="signer_email" placeholder="Email del firmante" value="{{form.signer_email.value|default_if_none:''}}" maxlength="320" required id="id_signer_email">
+                        <span class="bmd-help">EMAIL de la persona que firma el documento</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-2">
+                    <label for="id_expiration_date" class="col-sm-2 col-form-label">Fecha Expiración</label>
+                    <div class="col-sm-10">
+                      <div class="form-group">
+                        <input type="text" class="form-control datepicker" name="expiration_date" required value="{{form.expiration_date.value|date:'d/m/Y'|default_if_none:''}}">
+                        <span class="bmd-help">Fecha de expiración de la solicitud de firma. Después de esta fecha no se podrá firmar el documento.</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row mt-2">
+                    <label for="id_email_solicitante" class="col-sm-2 col-form-label">Solicitante</label>
+                    <div class="col-sm-10">
+                      <div class="form-group">
+                        <input type="email"class="form-control"  name="email_solicitante" placeholder="Email del solicitante" value="{{form.email_solicitante.value|default_if_none:''}}" maxlength="320" required id="id_email_solicitante">                  
+                        <span class="bmd-help">Email de la persona que solicita la firma. Recibirá una copia del PDF firmado.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-4 text-center">
+                    <!-- <label for="id_fichero_pdf" class="col-sm-2 col-form-label">Fichero PDF</label> -->
+                    <div class="col-sm-12 col-md-12 ">
+                      <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                        <div class="fileinput-new thumbnail">
+                          <img src="{% static 'assets/img/image_placeholder.jpg' %}" alt="...">
+                        </div>
+                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                        <div>
+                          <span class="btn btn-rose btn-round btn-file">
+                            <span class="fileinput-new">Selecciona PDF</span>
+                            <span class="fileinput-exists">Cambiar</span>
+                            <input type="file" name="fichero_pdf" required id="id_fichero_pdf" />
+                          </span>
+                          <a href="#" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Borrar</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-fill btn-rose">Crear solicitud<div class="ripple-container"></div></button>                  
+
+                </form>
+                
+              </div>
+            </div>
+          </div>          
+
+          <!--
+          <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+              {{ form.as_table }}
+            </table>
+            <input type="submit" value="Submit">
+          </form>
+          -->
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+  <script>
+    $(document).ready(function() {
+      console.log('hola mundo - sfirma_nuevo.html');
+    });
+    $('.datepicker').datetimepicker({
+      format: 'DD/MM/YYYY',
+      icons: {
+        time: "fa fa-clock-o",
+        date: "fa fa-calendar",
+        up: "fa fa-chevron-up",
+        down: "fa fa-chevron-down",
+        previous: 'fa fa-chevron-left',
+        next: 'fa fa-chevron-right',
+        today: 'fa fa-screenshot',
+        clear: 'fa fa-trash',
+        close: 'fa fa-remove'
+      }
+    });    
+  </script>
+{% endblock extra_js %}

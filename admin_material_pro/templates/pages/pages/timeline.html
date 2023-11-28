@@ -1,0 +1,302 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="header text-center">
+        <h3 class="title">Timeline</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-timeline card-plain">
+            <div class="card-body">
+              <ul class="timeline">
+                <li class="timeline-inverted">
+                  <div class="timeline-badge danger">
+                    <i class="material-icons">card_travel</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-danger">Some Title</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Wifey made the best Father's Day meal ever. So thankful so happy so blessed. Thank you for making my family We just had fun with the “future” theme !!! It was a fun night all together ... The always rude Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in downtown.</p>
+                    </div>
+                    <h6>
+                      <i class="ti-time"></i> 11 hours ago via Twitter
+                    </h6>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-badge success">
+                    <i class="material-icons">extension</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-success">Another One</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Thank God for the support of my wife and real friends. I also wanted to point out that it’s the first album to go number 1 off of streaming!!! I love you Ellen and also my number one design rule of anything I do from shoes to music to homes is that Kim has to like it....</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-badge info">
+                    <i class="material-icons">fingerprint</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-info">Another Title</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Called I Miss the Old Kanye That’s all it was Kanye And I love you like Kanye loves Kanye Famous viewing @ Figueroa and 12th in downtown LA 11:10PM</p>
+                      <p>What if Kanye made a song about Kanye Royère doesn't make a Polar bear bed but the Polar bear couch is my favorite piece of furniture we own It wasn’t any Kanyes Set on his goals Kanye</p>
+                      <hr>
+                    </div>
+                    <div class="timeline-footer">
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-round btn-info dropdown-toggle" data-toggle="dropdown">
+                          <i class="material-icons">build</i>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-badge warning">
+                    <i class="material-icons">flight_land</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-warning">Another One</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Tune into Big Boy's 92.3 I'm about to play the first single from Cruel Winter also to Kim’s hair and makeup Lorraine jewelry and the whole style squad at Balmain and the Yeezy team. Thank you Anna for the invite thank you to the whole Vogue team</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            if ($(".sidebar").length != 0) {
+              var ps = new PerfectScrollbar('.sidebar');
+            }
+            if ($(".sidebar-wrapper").length != 0) {
+              var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+            }
+            if ($(".main-panel").length != 0) {
+              var ps2 = new PerfectScrollbar('.main-panel');
+            }
+            if ($(".main").length != 0) {
+              var ps3 = new PerfectScrollbar('main');
+            }
+
+          } else {
+
+            if ($(".sidebar").length != 0) {
+              var ps = new PerfectScrollbar('.sidebar');
+              ps.destroy();
+            }
+            if ($(".sidebar-wrapper").length != 0) {
+              var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+              ps1.destroy();
+            }
+            if ($(".main-panel").length != 0) {
+              var ps2 = new PerfectScrollbar('.main-panel');
+              ps2.destroy();
+            }
+            if ($(".main").length != 0) {
+              var ps3 = new PerfectScrollbar('main');
+              ps3.destroy();
+            }
+
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      md.checkFullPageBackgroundImage();
+    });
+  </script>
+
+{% endblock extra_js %}

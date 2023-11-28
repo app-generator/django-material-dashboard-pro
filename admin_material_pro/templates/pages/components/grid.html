@@ -1,0 +1,465 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="card card-plain">
+        <div class="card-body">
+          <h4 class="card-title pl-3">XS Grid
+            <small>Always Horizontal</small>
+          </h4>
+          <div class="row">
+            <div class="col-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-4</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="card-title pl-3">SM Grid
+            <small>Collapsed at 576px</small>
+          </h4>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-sm-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-sm-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-sm-4</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="card-title pl-3">MD Grid
+            <small>Collapsed at 768px</small>
+          </h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-4</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="card-title pl-3">LG Grid
+            <small>Collapsed at 992px</small>
+          </h4>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-lg-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-lg-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-lg-4</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="card-title pl-3">XL Grid
+            <small>Collapsed at 1200px</small>
+          </h4>
+          <div class="row">
+            <div class="col-xl-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-xl-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-xl-4</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-xl-4</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="card-title pl-3">Mixed Grid
+            <small>Showing different sizes on different screens</small>
+          </h4>
+          <div class="row">
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-sm-6 col-lg-3</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-sm-6 col-lg-3</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-sm-6 col-lg-3</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-sm-6 col-lg-3</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="card-title pl-3">Offset Grid
+            <small>Adding some space when needed</small>
+          </h4>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-3</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 ml-auto">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-3 ml-auto</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 ml-auto mr-auto">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-4 ml-auto mr-auto</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ml-auto mr-auto">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-4 ml-auto mr-auto</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+              <div class="card">
+                <div class="card-body text-center">
+                  <code>col-md-6 ml-auto mr-auto</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="title mt-4 text-center">Paragraphs</h3>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3>Some Title Here</h3>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
+            </div>
+            <div class="col-sm-6">
+              <h3>Another Title Here</h3>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Some Title Here</h3>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Another Title Here</h3>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Another Title Here</h3>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Some Title Here</h3>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+            </div>
+            <div class="col-sm-8">
+              <h3>Another Title Here</h3>
+              <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  end card -->
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+  $(document).ready(function() {
+    $().ready(function() {
+      $sidebar = $('.sidebar');
+
+      $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+      $full_page = $('.full-page');
+
+      $sidebar_responsive = $('body > .navbar-collapse');
+
+      window_width = $(window).width();
+
+      fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+      if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+        if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+          $('.fixed-plugin .dropdown').addClass('open');
+        }
+
+      }
+
+      $('.fixed-plugin a').click(function(event) {
+        // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+        if ($(this).hasClass('switch-trigger')) {
+          if (event.stopPropagation) {
+            event.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+        }
+      });
+
+      $('.fixed-plugin .active-color span').click(function() {
+        $full_page_background = $('.full-page-background');
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        var new_color = $(this).data('color');
+
+        if ($sidebar.length != 0) {
+          $sidebar.attr('data-color', new_color);
+        }
+
+        if ($full_page.length != 0) {
+          $full_page.attr('filter-color', new_color);
+        }
+
+        if ($sidebar_responsive.length != 0) {
+          $sidebar_responsive.attr('data-color', new_color);
+        }
+      });
+
+      $('.fixed-plugin .background-color .badge').click(function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        var new_color = $(this).data('background-color');
+
+        if ($sidebar.length != 0) {
+          $sidebar.attr('data-background-color', new_color);
+        }
+      });
+
+      $('.fixed-plugin .img-holder').click(function() {
+        $full_page_background = $('.full-page-background');
+
+        $(this).parent('li').siblings().removeClass('active');
+        $(this).parent('li').addClass('active');
+
+
+        var new_image = $(this).find("img").attr('src');
+
+        if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+          $sidebar_img_container.fadeOut('fast', function() {
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $sidebar_img_container.fadeIn('fast');
+          });
+        }
+
+        if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+          var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+          $full_page_background.fadeOut('fast', function() {
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+            $full_page_background.fadeIn('fast');
+          });
+        }
+
+        if ($('.switch-sidebar-image input:checked').length == 0) {
+          var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+          var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+          $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+          $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+        }
+
+        if ($sidebar_responsive.length != 0) {
+          $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+        }
+      });
+
+      $('.switch-sidebar-image input').change(function() {
+        $full_page_background = $('.full-page-background');
+
+        $input = $(this);
+
+        if ($input.is(':checked')) {
+          if ($sidebar_img_container.length != 0) {
+            $sidebar_img_container.fadeIn('fast');
+            $sidebar.attr('data-image', '#');
+          }
+
+          if ($full_page_background.length != 0) {
+            $full_page_background.fadeIn('fast');
+            $full_page.attr('data-image', '#');
+          }
+
+          background_image = true;
+        } else {
+          if ($sidebar_img_container.length != 0) {
+            $sidebar.removeAttr('data-image');
+            $sidebar_img_container.fadeOut('fast');
+          }
+
+          if ($full_page_background.length != 0) {
+            $full_page.removeAttr('data-image', '#');
+            $full_page_background.fadeOut('fast');
+          }
+
+          background_image = false;
+        }
+      });
+
+      $('.switch-sidebar-mini input').change(function() {
+        $body = $('body');
+
+        $input = $(this);
+
+        if (md.misc.sidebar_mini_active == true) {
+          $('body').removeClass('sidebar-mini');
+          md.misc.sidebar_mini_active = false;
+
+          if ($(".sidebar").length != 0) {
+            var ps = new PerfectScrollbar('.sidebar');
+          }
+          if ($(".sidebar-wrapper").length != 0) {
+            var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+          }
+          if ($(".main-panel").length != 0) {
+            var ps2 = new PerfectScrollbar('.main-panel');
+          }
+          if ($(".main").length != 0) {
+            var ps3 = new PerfectScrollbar('main');
+          }
+
+        } else {
+
+          if ($(".sidebar").length != 0) {
+            var ps = new PerfectScrollbar('.sidebar');
+            ps.destroy();
+          }
+          if ($(".sidebar-wrapper").length != 0) {
+            var ps1 = new PerfectScrollbar('.sidebar-wrapper');
+            ps1.destroy();
+          }
+          if ($(".main-panel").length != 0) {
+            var ps2 = new PerfectScrollbar('.main-panel');
+            ps2.destroy();
+          }
+          if ($(".main").length != 0) {
+            var ps3 = new PerfectScrollbar('main');
+            ps3.destroy();
+          }
+
+
+          setTimeout(function() {
+            $('body').addClass('sidebar-mini');
+
+            md.misc.sidebar_mini_active = true;
+          }, 300);
+        }
+
+        // we simulate the window Resize so the charts will get updated in realtime.
+        var simulateWindowResize = setInterval(function() {
+          window.dispatchEvent(new Event('resize'));
+        }, 180);
+
+        // we stop the simulation of Window Resize after the animations are completed
+        setTimeout(function() {
+          clearInterval(simulateWindowResize);
+        }, 1000);
+
+      });
+    });
+  });
+</script>
+{% endblock extra_js %}
