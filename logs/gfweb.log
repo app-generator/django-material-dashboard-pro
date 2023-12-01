@@ -1,0 +1,222 @@
+django.utils.autoreload INFO 2023-11-28 16:27:33,651 autoreload.py autoreload run_with_reloader 668 MainProcess 13796 19100 Watching for file changes with StatReloader
+django.request WARNING 2023-11-28 16:27:37,376 log.py log log_response 241 MainProcess 13796 4892 Not Found: /
+django.request WARNING 2023-11-28 16:27:39,009 log.py log log_response 241 MainProcess 13796 4892 Not Found: /favicon.ico
+django.request WARNING 2023-11-28 16:27:49,951 log.py log log_response 241 MainProcess 13796 11392 Not Found: /
+django.request WARNING 2023-11-28 16:27:56,017 log.py log log_response 241 MainProcess 13796 7360 Not Found: /accounts/login/
+django.utils.autoreload INFO 2023-11-28 16:29:34,531 autoreload.py autoreload trigger_reload 266 MainProcess 13796 19100 C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\views.py changed, reloading.
+django.utils.autoreload INFO 2023-11-28 16:29:38,861 autoreload.py autoreload run_with_reloader 668 MainProcess 10516 4260 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-11-28 16:29:45,169 autoreload.py autoreload trigger_reload 266 MainProcess 10516 4260 C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\views.py changed, reloading.
+django.utils.autoreload INFO 2023-11-28 16:32:51,039 autoreload.py autoreload run_with_reloader 668 MainProcess 624 12528 Watching for file changes with StatReloader
+django.request WARNING 2023-11-28 16:33:20,842 log.py log log_response 241 MainProcess 624 1376 Not Found: /test_request/
+home.views WARNING 2023-11-28 16:33:27,675 views.py views test_request 43 MainProcess 624 1376 test_request
+home.views ERROR 2023-11-28 16:33:27,676 views.py views test_request 44 MainProcess 624 1376 test_request !!!!!
+home.views WARNING 2023-11-28 16:33:27,678 views.py views test_request 66 MainProcess 624 1376 {
+    "headers": {
+        "HTTP_HOST": "127.0.0.1:8000",
+        "HTTP_CONNECTION": "keep-alive",
+        "HTTP_SEC_CH_UA": "\"Microsoft Edge\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
+        "HTTP_SEC_CH_UA_MOBILE": "?0",
+        "HTTP_SEC_CH_UA_PLATFORM": "\"Windows\"",
+        "HTTP_UPGRADE_INSECURE_REQUESTS": "1",
+        "HTTP_USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0",
+        "HTTP_ACCEPT": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "HTTP_SEC_FETCH_SITE": "none",
+        "HTTP_SEC_FETCH_MODE": "navigate",
+        "HTTP_SEC_FETCH_USER": "?1",
+        "HTTP_SEC_FETCH_DEST": "document",
+        "HTTP_ACCEPT_ENCODING": "gzip, deflate, br",
+        "HTTP_ACCEPT_LANGUAGE": "es"
+    },
+    "get": {
+        "akak": "sksk"
+    },
+    "post": {},
+    "path": "/gfweb/test_request/",
+    "body": "b''",
+    "happydonia": "",
+    "is_authenticated": false,
+    "username": ""
+}
+django.request WARNING 2023-11-28 16:33:40,890 log.py log log_response 241 MainProcess 624 1376 Not Found: /accounts/login/
+django.request WARNING 2023-11-28 16:33:50,078 log.py log log_response 241 MainProcess 624 1376 Not Found: /gfweb/accounts/login/
+django.utils.autoreload INFO 2023-11-28 16:34:39,299 autoreload.py autoreload trigger_reload 266 MainProcess 624 12528 C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\views.py changed, reloading.
+django.utils.autoreload INFO 2023-11-28 16:34:42,111 autoreload.py autoreload run_with_reloader 668 MainProcess 16256 12304 Watching for file changes with StatReloader
+django.request WARNING 2023-11-28 16:35:03,875 log.py log log_response 241 MainProcess 16256 17272 Not Found: /
+django.request WARNING 2023-11-28 16:35:10,259 log.py log log_response 241 MainProcess 16256 17272 Not Found: /accounts/login/
+django.request WARNING 2023-11-28 16:35:58,403 log.py log log_response 241 MainProcess 16256 17272 Not Found: /accounts/login/
+django.request WARNING 2023-11-28 16:36:24,490 log.py log log_response 241 MainProcess 16256 17272 Not Found: /accounts/login/
+django.utils.autoreload INFO 2023-11-28 16:37:28,785 autoreload.py autoreload run_with_reloader 668 MainProcess 7268 14260 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-11-28 16:39:26,697 autoreload.py autoreload trigger_reload 266 MainProcess 7268 14260 C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\views.py changed, reloading.
+django.utils.autoreload INFO 2023-11-28 16:39:29,253 autoreload.py autoreload run_with_reloader 668 MainProcess 9016 14884 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-11-28 16:39:41,779 autoreload.py autoreload trigger_reload 266 MainProcess 9016 14884 C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\views.py changed, reloading.
+django.utils.autoreload INFO 2023-11-28 16:39:44,461 autoreload.py autoreload run_with_reloader 668 MainProcess 18748 8796 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-11-28 16:58:15,019 autoreload.py autoreload run_with_reloader 668 MainProcess 16176 15716 Watching for file changes with StatReloader
+django.request WARNING 2023-11-28 16:58:26,738 log.py log log_response 241 MainProcess 16176 18516 Not Found: /
+django.request WARNING 2023-11-28 16:58:27,661 log.py log log_response 241 MainProcess 16176 18516 Not Found: /favicon.ico
+django.utils.autoreload INFO 2023-11-28 17:05:02,352 autoreload.py autoreload run_with_reloader 668 MainProcess 4204 18412 Watching for file changes with StatReloader
+django.request WARNING 2023-11-28 17:05:29,539 log.py log log_response 241 MainProcess 4204 14924 Not Found: /
+django.request ERROR 2023-11-28 17:06:48,254 log.py log log_response 241 MainProcess 4204 9640 Internal Server Error: /gfweb/
+Traceback (most recent call last):
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jws.py", line 263, in _load
+    header_data = base64url_decode(header_segment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\trabajo\python\python311_64\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\trabajo\python\python311_64\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Invalid base64-encoded string: number of data characters (41) cannot be 1 more than a multiple of 4
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\decorators.py", line 107, in wrapper
+    decoded = jwt.decode(token, public_key_happydonia, algorithms=['RS256'], options={"verify_signature": False})
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jws.py", line 265, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+django.request ERROR 2023-11-28 17:07:43,995 log.py log log_response 241 MainProcess 4204 9640 Internal Server Error: /gfweb/
+Traceback (most recent call last):
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jws.py", line 263, in _load
+    header_data = base64url_decode(header_segment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\trabajo\python\python311_64\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\trabajo\python\python311_64\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Invalid base64-encoded string: number of data characters (37) cannot be 1 more than a multiple of 4
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\decorators.py", line 107, in wrapper
+    decoded = jwt.decode(token, public_key_happydonia, algorithms=['RS256'], options={"verify_signature": False})
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\jwt\api_jws.py", line 265, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+django.utils.autoreload INFO 2023-11-29 08:02:18,733 autoreload.py autoreload run_with_reloader 668 MainProcess 12208 11692 Watching for file changes with StatReloader
+django.request WARNING 2023-11-29 08:02:33,434 log.py log log_response 241 MainProcess 12208 10436 Not Found: /
+django.request WARNING 2023-11-29 08:02:34,607 log.py log log_response 241 MainProcess 12208 10436 Not Found: /favicon.ico
+django.request ERROR 2023-11-29 08:02:39,927 log.py log log_response 241 MainProcess 12208 14524 Internal Server Error: /gfweb/
+Traceback (most recent call last):
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\decorators.py", line 141, in wrapper
+    return function(request,*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\TRABAJO\Python\Django\plantilla_material_pro\gfweb\home\views.py", line 37, in index
+    return render(request, 'pages/index-happy.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\TRABAJO\Python\Django\plantilla_material_pro\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plantilla' not found. 'plantilla' is not a valid view function or pattern name.
+django.request WARNING 2023-11-29 08:03:45,863 log.py log log_response 241 MainProcess 12208 14268 Not Found: /
+django.request WARNING 2023-11-29 08:03:46,133 log.py log log_response 241 MainProcess 12208 14268 Not Found: /favicon.ico
+django.utils.autoreload INFO 2023-11-29 13:11:29,595 autoreload.py autoreload run_with_reloader 668 MainProcess 11308 16960 Watching for file changes with StatReloader
+django.request WARNING 2023-11-29 13:11:45,985 log.py log log_response 241 MainProcess 11308 7476 Not Found: /GFWEB
+django.request WARNING 2023-11-29 13:11:46,831 log.py log log_response 241 MainProcess 11308 7476 Not Found: /favicon.ico

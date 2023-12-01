@@ -6,6 +6,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse, Http404
 from django.template import loader
+from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -17,9 +18,10 @@ from home.decorators import happy_login_required
 logger = logging.getLogger(__name__)
 
 # Create your views here.
+login_url = '/gfweb/cpd/login/'
 
 @happy_login_required
-@login_required(login_url="/accounts/login/")
+@login_required(login_url=login_url)
 def index(request):
 
     context = {
@@ -66,7 +68,7 @@ def test_request(request):
     return JsonResponse(resultado)
 
 
-@login_required(login_url="/accounts/login/")
+@login_required(login_url=login_url)
 def sfirma_nuevo(request):
 
     if request.method == 'POST':
@@ -139,7 +141,7 @@ def sfirma_nuevo(request):
 
 
 
-@login_required(login_url="/accounts/login/")
+@login_required(login_url=login_url)
 def sfirma_consulta(request):
 
     context = {
@@ -157,7 +159,7 @@ def sfirma_consulta(request):
     return HttpResponse(html_template.render(context, request))    
 
 
-@login_required(login_url="/accounts/login/")
+@login_required(login_url=login_url)
 def sfirma_descarga_pdf(request, doc_id, status):
 
     try:

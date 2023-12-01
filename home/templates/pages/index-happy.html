@@ -50,6 +50,35 @@
                           <a class="btn btn-success btn-lg" href="{% url 'sfirma_consulta' %}">Consulta</a>
                         </div>
                       </div>
+                      <!--
+                      <div class="row mt-4">
+                        <div class="col-md-6 ml-auto mr-auto">
+                          <div class="card card-chart">
+                            <div class="card-header card-header-icon card-header-danger">
+                              <div class="card-icon">
+                                <i class="material-icons">pie_chart</i>
+                              </div>
+                              <h4 class="card-title">Pie Chart</h4>
+                            </div>
+                            <div class="card-body">
+                              <div id="chartPreferences" class="ct-chart"></div>
+                            </div>
+                            <div class="card-footer">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <h6 class="card-category">Legend</h6>
+                                </div>
+                                <div class="col-md-12">
+                                  <i class="fa fa-circle text-info"></i> Apple
+                                  <i class="fa fa-circle text-warning"></i> Samsung
+                                  <i class="fa fa-circle text-danger"></i> Windows Phone
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>                      
+                      -->
                     </div>
                   </div>
                 </div>
@@ -66,7 +95,7 @@
                       <div class="row">
                         {% for boton in botones %}
                           <div class="col-sm-4 col-lg-2">
-                            <a href="/">
+                            <a href="{% url 'index' %}">
                               <div class="card"><div class="card-body text-center">
                                 <code>{{boton}}</code>
                               </div></div>
@@ -90,6 +119,9 @@
                       </p>
                     </div>
                     <div class="card-body">
+
+                      <h2><a href="{% url 'dashboard' %}">Plantilla Material Pro</a></h2>
+
                       Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
                       <br>
                       <br>Dynamically innovate resource-leveling customer service for state of the art customer service.
@@ -127,6 +159,19 @@
     $(document).ready(function() {
       $().ready(function() {
         console.log('hola mundo - index-happy.html');
+
+        /*
+        // PIE Chart
+        var dataPreferences = {
+          labels: ['62%', '32%', '6%'],
+          series: [62, 32, 6]
+        };
+        var optionsPreferences = {
+          height: '230px'
+        };
+        Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);        
+        */
+
       });
     });
   </script>
