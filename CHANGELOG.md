@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.9] 2025-05-13
+### Changes
+
+- Added React Integration
+- Codebase refactoring
+
 ## [1.0.8] 2024-12-04
 ### Changes
 
@@ -7,7 +13,7 @@
 - Update Product Links
   - 👉 [Django Material Dashboard PRO](https://app-generator.dev/product/material-dashboard-pro/django/) - `Product Page`
   - 👉 [Django Material Dashboard PRO](https://django-material-dash2-pro.onrender.com/) - `LIVE Demo` 
-  - 👉 [Django Material Dashboard PRO Documentation](https://app-generator.dev/docs/products/django/material-dashboard-pro/index.html) - `Complete Information` and Support Links
+  - 👉 [Django Material Dashboard PRO](https://app-generator.dev/docs/products/django/material-dashboard-pro/index.html) - `Documentation` (learn how to use the product) 
 
 
 ## [1.0.7] 2024-08-13
